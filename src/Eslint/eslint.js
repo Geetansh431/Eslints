@@ -1,6 +1,6 @@
 import { ERROR, WARN } from './constants/constants.js'
 import { noDefaultOrNamespaceImportExport } from './Custom-Rules/no-default-or-namespace-import-export.js'
-import { noBarrelFiles } from './custom-rules/no-barrel-files.js'
+import { noBarrelFiles } from './Custom-Rules/no-barrel-files.js'
 
 export function getTypeScriptRules() {
   return {
