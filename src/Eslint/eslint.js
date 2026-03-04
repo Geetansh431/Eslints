@@ -4,6 +4,7 @@ import { noBarrelFiles } from './Custom-Rules/no-barrel-files.js'
 import { noDeepRelativeImports } from './Custom-Rules/no-deep-relative-imports.js'
 import { enforceConstantNaming } from './Custom-Rules/enforce-constant-naming.js'
 import { enforceComponentFilenameMatch } from './Custom-Rules/enforce-component-filename-match.js'
+import { requireErrorHandling } from './Custom-Rules/require-error-handling.js'
 
 export function getTypeScriptRules() {
   return {
@@ -36,6 +37,7 @@ export function getCustomRules() {
     'custom/no-deep-relative-imports': ERROR,
     'custom/enforce-constant-naming': ERROR,
     'custom/enforce-component-filename-match': ERROR,
+    'custom/require-error-handling': ERROR,
   }
 }
 
@@ -46,6 +48,7 @@ export const customPlugin = {
     'no-deep-relative-imports': noDeepRelativeImports,
     'enforce-constant-naming': enforceConstantNaming,
     'enforce-component-filename-match': enforceComponentFilenameMatch,
+    'require-error-handling': requireErrorHandling,
   },
 }
 
