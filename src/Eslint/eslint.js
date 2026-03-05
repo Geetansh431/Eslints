@@ -5,6 +5,7 @@ import { noDeepRelativeImports } from './Custom-Rules/no-deep-relative-imports.j
 import { enforceConstantNaming } from './Custom-Rules/enforce-constant-naming.js'
 import { enforceComponentFilenameMatch } from './Custom-Rules/enforce-component-filename-match.js'
 import { requireErrorHandling } from './Custom-Rules/require-error-handling.js'
+import { noNestedTernary } from './Custom-Rules/no-nested-ternary.js'
 
 export function getTypeScriptRules() {
   return {
@@ -38,6 +39,7 @@ export function getCustomRules() {
     'custom/enforce-constant-naming': ERROR,
     'custom/enforce-component-filename-match': ERROR,
     'custom/require-error-handling': ERROR,
+    'custom/no-nested-ternary': ERROR,
   }
 }
 
@@ -49,6 +51,7 @@ export const customPlugin = {
     'enforce-constant-naming': enforceConstantNaming,
     'enforce-component-filename-match': enforceComponentFilenameMatch,
     'require-error-handling': requireErrorHandling,
+    'no-nested-ternary': noNestedTernary,
   },
 }
 
