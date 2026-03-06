@@ -6,6 +6,7 @@ import { enforceConstantNaming } from './Custom-Rules/enforce-constant-naming.js
 import { enforceComponentFilenameMatch } from './Custom-Rules/enforce-component-filename-match.js'
 import { requireErrorHandling } from './Custom-Rules/require-error-handling.js'
 import { noNestedTernary } from './Custom-Rules/no-nested-ternary.js'
+import { preferTypeOverInterface } from './Custom-Rules/prefer-type-over-interface.js'
 
 export function getTypeScriptRules() {
   return {
@@ -40,6 +41,7 @@ export function getCustomRules() {
     'custom/enforce-component-filename-match': ERROR,
     'custom/require-error-handling': ERROR,
     'custom/no-nested-ternary': ERROR,
+    'custom/prefer-type-over-interface': ERROR,
   }
 }
 
@@ -52,6 +54,7 @@ export const customPlugin = {
     'enforce-component-filename-match': enforceComponentFilenameMatch,
     'require-error-handling': requireErrorHandling,
     'no-nested-ternary': noNestedTernary,
+    'prefer-type-over-interface': preferTypeOverInterface,
   },
 }
 
